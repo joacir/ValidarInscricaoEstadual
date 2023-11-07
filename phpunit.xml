@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
-        colors="true"
-        processIsolation="false"
-        stopOnFailure="false"
-        syntaxCheck="false"
-        bootstrap="./vendor/autoload.php"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    colors="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    bootstrap="tests/bootstrap.php"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
 >
+    <coverage>
+        <include>
+            <directory suffix=".php">src/</directory>
+        </include>
+        <report>
+            <clover outputFile="tmp/clover.xml"/>
+            <crap4j outputFile="tmp/crap4j.xml" />
+            <html outputDirectory="tmp/html"/>
+        </report>
+    </coverage>
     <php>
         <ini name="memory_limit" value="-1"/>
         <ini name="apc.enable_cli" value="1"/>
     </php>
-
     <!-- Add any additional test suites you want to run here -->
     <testsuites>
-        <testsuite name="Joacir/ValidarInscricaoEstadual Test Suite">
-            <directory>./tests/TestCase</directory>
+        <testsuite name="Validar Inscricao Estadual">
+            <directory>tests/TestCase/</directory>
         </testsuite>
     </testsuites>
-
-    <!-- Prevent coverage reports from looking in tests and vendors -->
-    <filter>
-        <whitelist>
-            <directory suffix=".php">./src/</directory>
-        </whitelist>
-        <blacklist>
-            <directory suffix=".php">./vendor/</directory>
-            <directory suffix=".ctp">./vendor/</directory>
-
-            <directory suffix=".php">./tests/</directory>
-            <directory suffix=".ctp">./tests/</directory>
-        </blacklist>
-
-    </filter>
     <logging>
-        <log type="coverage-clover" target="tmp/coverage.xml"/>
+        <junit outputFile="tmp/phpunit.xml"/>
     </logging>
 </phpunit>
