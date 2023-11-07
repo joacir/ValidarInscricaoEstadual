@@ -23,7 +23,7 @@ class Goias implements ValidadorInteface
             $valid = false;
         }
         $inicio = substr($inscricao_estadual, 0, 2);
-        if ($valid && !in_array($inicio, ['10', '11', '15'])) {
+        if ($valid && !in_array($inicio, ['10', '11', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29'])) {
             $valid = false;
         }
         if ($valid && !self::calculaDigito($inscricao_estadual)) {

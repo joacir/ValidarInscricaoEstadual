@@ -213,6 +213,9 @@ class ValidadorTest extends TestCase
 
         // começa com 10 e o dígito verificador é 1, Fora do intervalo que mantém em 1, transformando em 0
         self::assertTrue(Validador::check(Estados::GO, "101030940"));
+
+        // começa com 20
+        self::assertTrue(Validador::check(Estados::GO, "200567497"));
     }
 
     public function testGoiasFalse()
