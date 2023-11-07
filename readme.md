@@ -7,7 +7,7 @@ Esse repositório é um fork de [https://github.com/Joacir/InscricaoEstadual](ht
 
 ## Requerimentos
 
-* PHP 5.4.16+
+* PHP 7.4+
 
 ## Instalação
 
