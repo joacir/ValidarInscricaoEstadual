@@ -1,42 +1,42 @@
 <?php
 /**
- * @author   "Thiago Souza" <thiagocfn@msn.com>
+ * @author   "Thiago Souza" <Joacir@msn.com>
  * @version  1.0
- * @link     https://github.com/thiagocfn/InscricaoEstadual
- * @example  https://github.com/thiagocfn/InscricaoEstadual
+ * @link     https://github.com/Joacir/InscricaoEstadual
+ * @example  https://github.com/Joacir/InscricaoEstadual
  * @license  Revised BSD
  */
 
-namespace Thiagocfn\InscricaoEstadual\Util;
+namespace Joacir\ValidarInscricaoEstadual\Util;
 
 
-use Thiagocfn\InscricaoEstadual\Util\Validador\Acre;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Alagoas;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Amapa;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Amazonas;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Bahia;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Ceara;
-use Thiagocfn\InscricaoEstadual\Util\Validador\DistritoFederal;
-use Thiagocfn\InscricaoEstadual\Util\Validador\EspiritoSanto;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Goias;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Maranhao;
-use Thiagocfn\InscricaoEstadual\Util\Validador\MatoGrosso;
-use Thiagocfn\InscricaoEstadual\Util\Validador\MatoGrossoDoSul;
-use Thiagocfn\InscricaoEstadual\Util\Validador\MinasGerais;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Para;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Paraiba;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Parana;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Pernambuco;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Piaui;
-use Thiagocfn\InscricaoEstadual\Util\Validador\RioDeJaneiro;
-use Thiagocfn\InscricaoEstadual\Util\Validador\RioGrandeDoNorte;
-use Thiagocfn\InscricaoEstadual\Util\Validador\RioGrandeDoSul;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Rondonia;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Roraima;
-use Thiagocfn\InscricaoEstadual\Util\Validador\SantaCatarina;
-use Thiagocfn\InscricaoEstadual\Util\Validador\SaoPaulo;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Sergipe;
-use Thiagocfn\InscricaoEstadual\Util\Validador\Tocantins;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Acre;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Alagoas;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Amapa;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Amazonas;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Bahia;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Ceara;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\DistritoFederal;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\EspiritoSanto;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Goias;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Maranhao;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\MatoGrosso;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\MatoGrossoDoSul;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\MinasGerais;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Para;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Paraiba;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Parana;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Pernambuco;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Piaui;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\RioDeJaneiro;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\RioGrandeDoNorte;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\RioGrandeDoSul;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Rondonia;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Roraima;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\SantaCatarina;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\SaoPaulo;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Sergipe;
+use Joacir\ValidarInscricaoEstadual\Util\Validador\Tocantins;
 
 class Validador
 {
@@ -52,10 +52,10 @@ class Validador
     {
         //Transforma a sigla para maiúsculo
         $estado = strtoupper($estado);
-        
+
         //Remove a máscara da inscrição deixando apenas os números
         $inscricao_estadual = preg_replace( '/[^0-9]/', '', $inscricao_estadual);
-        
+
         switch ($estado) {
             case Estados::AC:
                 $valid = Acre::check($inscricao_estadual);

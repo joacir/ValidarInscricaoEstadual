@@ -1,9 +1,9 @@
 <?php
-namespace Thiagocfn\InscricaoEstadual\Test\TestCase;
+namespace Joacir\ValidarInscricaoEstadual\Test\TestCase;
 
 use PHPUnit\Framework\TestCase;
-use Thiagocfn\InscricaoEstadual\Util\Estados;
-use Thiagocfn\InscricaoEstadual\Util\Validador;
+use Joacir\ValidarInscricaoEstadual\Util\Estados;
+use Joacir\ValidarInscricaoEstadual\Util\Validador;
 
 class ValidadorTest extends TestCase
 {

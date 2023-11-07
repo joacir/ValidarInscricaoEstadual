@@ -6,10 +6,10 @@
  * Time: 17:54
  */
 
-namespace Thiagocfn\InscricaoEstadual\Util\Validador;
+namespace Joacir\ValidarInscricaoEstadual\Util\Validador;
 
 
-use Thiagocfn\InscricaoEstadual\Util\ValidadorInteface;
+use Joacir\ValidarInscricaoEstadual\Util\ValidadorInteface;
 
 class Acre implements ValidadorInteface
 {

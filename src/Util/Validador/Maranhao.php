@@ -1,6 +1,6 @@
 <?php
 
-namespace Thiagocfn\InscricaoEstadual\Util\Validador;
+namespace Joacir\ValidarInscricaoEstadual\Util\Validador;
 
 
 class Maranhao extends Ceara

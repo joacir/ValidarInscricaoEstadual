@@ -2,7 +2,7 @@
 
 Validação de inscrição estadual para todos os estados brasileiros.
 
-Esse repositório é um fork de [https://github.com/Thiagocfn/InscricaoEstadual](https://github.com/Thiagocfn/InscricaoEstadual)
+Esse repositório é um fork de [https://github.com/Joacir/InscricaoEstadual](https://github.com/Joacir/InscricaoEstadual)
 
 
 ## Requerimentos

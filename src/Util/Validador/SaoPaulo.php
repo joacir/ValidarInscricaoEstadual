@@ -1,9 +1,9 @@
 <?php
 
-namespace Thiagocfn\InscricaoEstadual\Util\Validador;
+namespace Joacir\ValidarInscricaoEstadual\Util\Validador;
 
 
-use Thiagocfn\InscricaoEstadual\Util\ValidadorInteface;
+use Joacir\ValidarInscricaoEstadual\Util\ValidadorInteface;
 
 class SaoPaulo implements ValidadorInteface
 {
